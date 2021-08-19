@@ -8,7 +8,7 @@
 
 # Config
 CURRENT_DIR="$(pwd)"
-KERNELNAME="PhoenixKernel_epsilon"
+KERNELNAME="PhoenixKernel_arrow"
 KERNEL_DIR="$CURRENT_DIR"
 AK_REPO="https://github.com/phoenix-1708/AnyKernel3"
 AK_BRANCH="sweet"

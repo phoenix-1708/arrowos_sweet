@@ -70,10 +70,11 @@ build_kernel() {
 
     BUILD_START=$(date +"%s")
     make -j$(nproc --all) O=out \
-                PATH="$TC_DIR/bin:$PATH" \
-                CC="clang" \
-                CROSS_COMPILE=$TC_DIR/bin/aarch64-linux-gnu- \
-                CROSS_COMPILE_ARM32=$TC_DIR/bin/arm-linux-gnueabi- \
+                PATH="${TC_DIR}/bin:${TC_DIR64}/bin:${TC_DIR32}/bin:${PATH}" \
+                CC=clang \
+		CLANG_TRIPLE=${TC_DIR}/bin/aarch64-linux-gnu- \
+                CROSS_COMPILE=${TC_DIR64}/bin/aarch64-linux-android- \
+                CROSS_COMPILE_ARM32=${TC_DIR32}/bin/arm-linux-androideabi- \
                 LLVM=llvm- \
                 AR=llvm-ar \
                 NM=llvm-nm \

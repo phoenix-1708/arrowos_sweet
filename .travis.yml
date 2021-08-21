@@ -1,3 +1,5 @@
+
+language: python
 dist: focal
 script:
      - sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y install git gh bc build-essential zip curl libstdc++6 git wget python gcc clang libssl-dev openssl rsync flex bison gcc-aarch64-linux-gnu
